@@ -1,0 +1,1042 @@
+.map {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    width: 95vw;
+    /* gap: 1rem; */
+    overflow: hidden;
+}
+
+.bgimg-container {
+    width: 60vw;
+    height: 80vh;
+    overflow: auto;
+}
+
+.bgimg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: 0 0;
+    transition: transform 0.3s ease;
+}
+
+#image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 900px;
+    width: 1290px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.user-data-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.user-data-dialog h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.user-data-dialog p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.user-data-dialog button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007eff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user-data-dialog button:hover {
+    background-color: #0056b3;
+}
+
+/* #name{
+    display: none;
+  } */
+
+#zoomInButton,
+#zoomOutButton {
+    padding: .5rem 2rem;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#zoomInButton::before,
+#zoomOutButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(0, 98, 255);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+#zoomInButton:hover,
+#zoomOutButton:hover {
+    background-color: rgb(0, 98, 255);
+    color: white;
+}
+
+#zoomInButton:hover::before,
+#zoomOutButton:hover::before {
+    width: 100%;
+}
+
+
+.rotateOnClick {
+    width: 100%;
+}
+
+.MeetingRoom4 {
+    position: absolute;
+    font-size: 10px;
+    top: 14.5rem;
+    left: 9.8rem;
+    cursor: pointer;
+}
+
+.office1 {
+    position: absolute;
+    font-size: 10px;
+    top: 20.2rem;
+    left: 8.8rem;
+    cursor: pointer;
+
+}
+
+.office2 {
+    position: absolute;
+    font-size: 10px;
+    top: 24.5rem;
+    left: 8.8rem;
+    cursor: pointer;
+
+}
+
+.hide {
+    display: none;
+}
+
+.office3 {
+    position: absolute;
+    font-size: 10px;
+    top: 30rem;
+    left: 8.8rem;
+    cursor: pointer;
+
+}
+
+.office4 {
+    position: absolute;
+    font-size: 10px;
+    top: 34.9rem;
+    left: 8.8rem;
+    cursor: pointer;
+
+}
+
+.office5 {
+
+    position: absolute;
+    font-size: 10px;
+    top: 39.2rem;
+    left: 8.8rem;
+    cursor: pointer;
+
+
+}
+
+.office6 {
+
+    position: absolute;
+    font-size: 10px;
+    top: 44.2rem;
+    left: 8.8rem;
+    cursor: pointer;
+
+
+}
+
+.office7 {
+    position: absolute;
+    font-size: 10px;
+    top: 44.4rem;
+    left: 22.8rem;
+    cursor: pointer;
+
+}
+
+.office8 {
+    position: absolute;
+    font-size: 10px;
+    top: 39.8rem;
+    left: 22.8rem;
+    cursor: pointer;
+
+}
+
+.office9 {
+    position: absolute;
+    font-size: 10px;
+    top: 35.2rem;
+    left: 22.8rem;
+    cursor: pointer;
+
+}
+
+.office10 {
+    position: absolute;
+    font-size: 10px;
+    top: 13rem;
+    left: 62rem;
+    cursor: pointer;
+
+}
+
+.office11 {
+    position: absolute;
+    font-size: 10px;
+    top: 13rem;
+    left: 68.5rem;
+    cursor: pointer;
+
+}
+
+.office12 {
+    position: absolute;
+    font-size: 10px;
+    top: 37rem;
+    left: 65rem;
+    cursor: pointer;
+
+}
+
+.office13 {
+    position: absolute;
+    font-size: 10px;
+    top: 37rem;
+    left: 60.5rem;
+    cursor: pointer;
+
+}
+
+.extraoffice1 {
+    position: absolute;
+    font-size: 10px;
+    top: 8.5rem;
+    left: 21.8rem;
+    cursor: pointer;
+
+}
+
+.extraoffice2 {
+    position: absolute;
+    font-size: 10px;
+    top: 8.5rem;
+    left: 29.8rem;
+    cursor: pointer;
+
+}
+
+.extraoffice3 {
+    position: absolute;
+    font-size: 10px;
+    top: 9.3rem;
+    left: 46.8rem;
+    cursor: pointer;
+
+}
+
+.meetingroom1 {
+    position: absolute;
+    font-size: 10px;
+    top: 43rem;
+    left: 51.9rem;
+    cursor: pointer;
+
+}
+
+.meetingroom2 {
+    position: absolute;
+    font-size: 10px;
+    top: 35.4rem;
+    left: 54.6rem;
+    cursor: pointer;
+
+}
+
+.meetingroom3 {
+    position: absolute;
+    font-size: 10px;
+    top: 34.2rem;
+    left: 48.9rem;
+    cursor: pointer;
+
+}
+
+.Workstaion1 {
+    position: absolute;
+    font-size: 10px;
+    top: 45.4rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion2 {
+    position: absolute;
+    font-size: 10px;
+    top: 43.9rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion3 {
+    position: absolute;
+    font-size: 10px;
+    top: 42.4rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion4 {
+    position: absolute;
+    font-size: 10px;
+    top: 40.9rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion8 {
+    position: absolute;
+    font-size: 10px;
+    top: 45.4rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion7 {
+    position: absolute;
+    font-size: 10px;
+    top: 43.8rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion6 {
+    position: absolute;
+    font-size: 10px;
+    top: 42.3rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion5 {
+    position: absolute;
+    font-size: 10px;
+    top: 40.8rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion9 {
+    position: absolute;
+    font-size: 10px;
+    top: 37.9rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion10 {
+    position: absolute;
+    font-size: 10px;
+    top: 36.4rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion11 {
+    position: absolute;
+    font-size: 10px;
+    top: 34.9rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion12 {
+    position: absolute;
+    font-size: 10px;
+    top: 33.3rem;
+    left: 13.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion13 {
+    position: absolute;
+    font-size: 10px;
+    top: 33.2rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion14 {
+    position: absolute;
+    font-size: 10px;
+    top: 34.9rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion15 {
+    position: absolute;
+    font-size: 10px;
+    top: 36.3rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion16 {
+    position: absolute;
+    font-size: 10px;
+    top: 38rem;
+    left: 16.8rem;
+    cursor: pointer;
+
+}
+
+
+.Workstaion17 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 17rem;
+    cursor: pointer;
+
+}
+
+.Workstaion18 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 17rem;
+    cursor: pointer;
+
+}
+
+.Workstaion19 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 17rem;
+    cursor: pointer;
+
+}
+
+.Workstaion20 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 20rem;
+    cursor: pointer;
+
+}
+
+.Workstaion21 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.3rem;
+    left: 20rem;
+    cursor: pointer;
+
+}
+
+.Workstaion22 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.8rem;
+    left: 20rem;
+    cursor: pointer;
+
+}
+
+.Workstaion23 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 21.6rem;
+    cursor: pointer;
+
+}
+
+.Workstaion24 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 21.6rem;
+    cursor: pointer;
+
+}
+
+.Workstaion25 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 21.6rem;
+    cursor: pointer;
+
+}
+
+.Workstaion26 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 24.3rem;
+    cursor: pointer;
+
+}
+
+.Workstaion27 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 24.3rem;
+    cursor: pointer;
+
+}
+
+.Workstaion28 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 24.3rem;
+    cursor: pointer;
+
+}
+
+.Workstaion29 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 28.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion30 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 28.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion31 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 28.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion32 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 31.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion33 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 31.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion34 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 31.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion35 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.8rem;
+    left: 36rem;
+    cursor: pointer;
+
+}
+
+.Workstaion36 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 36rem;
+    cursor: pointer;
+
+}
+
+.Workstaion37 {
+    position: absolute;
+    font-size: 10px;
+    top: 19rem;
+    left: 36rem;
+    cursor: pointer;
+
+}
+
+.Workstaion38 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.8rem;
+    left: 39rem;
+    cursor: pointer;
+
+}
+
+.Workstaion39 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 39rem;
+    cursor: pointer;
+
+}
+
+.Workstaion40 {
+    position: absolute;
+    font-size: 10px;
+    top: 19rem;
+    left: 39rem;
+    cursor: pointer;
+
+}
+
+.Workstaion41 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.8rem;
+    left: 43.5rem;
+    cursor: pointer;
+
+}
+
+.Workstaion42 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 43.5rem;
+    cursor: pointer;
+
+}
+
+.Workstaion43 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 43.5rem;
+    cursor: pointer;
+
+}
+
+.Workstaion44 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 46.2rem;
+    cursor: pointer;
+
+}
+
+.Workstaion45 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 46.2rem;
+    cursor: pointer;
+
+}
+
+.Workstaion46 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.8rem;
+    left: 46.2rem;
+    cursor: pointer;
+
+}
+
+.Workstaion47 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 50.3rem;
+    cursor: pointer;
+
+}
+
+.Workstaion48 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.5rem;
+    left: 50.3rem;
+    cursor: pointer;
+
+}
+
+.Workstaion49 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 50.3rem;
+    cursor: pointer;
+
+}
+
+.Workstaion50 {
+    position: absolute;
+    font-size: 10px;
+    top: 18.9rem;
+    left: 53.1rem;
+    cursor: pointer;
+
+}
+
+.Workstaion51 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 53.1rem;
+    cursor: pointer;
+
+}
+
+.Workstaion52 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 53.1rem;
+    cursor: pointer;
+
+}
+
+
+.Workstaion53 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 54.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion54 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 54.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion55 {
+    position: absolute;
+    font-size: 10px;
+    top: 19rem;
+    left: 54.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion56 {
+    position: absolute;
+    font-size: 10px;
+    top: 19rem;
+    left: 57.5rem;
+    cursor: pointer;
+
+}
+
+.Workstaion57 {
+    position: absolute;
+    font-size: 10px;
+    top: 17.4rem;
+    left: 57.5rem;
+    cursor: pointer;
+
+}
+
+.Workstaion58 {
+    position: absolute;
+    font-size: 10px;
+    top: 15.9rem;
+    left: 57.5rem;
+    cursor: pointer;
+
+}
+
+.Workstaion59 {
+    position: absolute;
+    font-size: 10px;
+    top: 42.5rem;
+    left: 61rem;
+    cursor: pointer;
+
+}
+
+.Workstaion60 {
+    position: absolute;
+    font-size: 10px;
+    top: 44.1rem;
+    left: 61rem;
+    cursor: pointer;
+
+}
+
+.Workstaion61 {
+    position: absolute;
+    font-size: 10px;
+    top: 45.6rem;
+    left: 61rem;
+    cursor: pointer;
+
+}
+
+.Workstaion62 {
+    position: absolute;
+    font-size: 10px;
+    top: 45.6rem;
+    left: 64rem;
+    cursor: pointer;
+
+}
+
+.Workstaion63 {
+    position: absolute;
+    font-size: 10px;
+    top: 44.1rem;
+    left: 64rem;
+    cursor: pointer;
+
+}
+
+.Workstaion64 {
+    position: absolute;
+    font-size: 10px;
+    top: 42.5rem;
+    left: 64rem;
+    cursor: pointer;
+
+}
+
+
+.Workstaion65 {
+    position: absolute;
+    font-size: 10px;
+    top: 42.5rem;
+    left: 66.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion66 {
+    position: absolute;
+    font-size: 10px;
+    top: 44rem;
+    left: 66.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion67 {
+    position: absolute;
+    font-size: 10px;
+    top: 45.6rem;
+    left: 66.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion68 {
+    position: absolute;
+    font-size: 10px;
+    top: 45.6rem;
+    left: 69.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion69 {
+    position: absolute;
+    font-size: 10px;
+    top: 44rem;
+    left: 69.8rem;
+    cursor: pointer;
+
+}
+
+.Workstaion70 {
+    position: absolute;
+    font-size: 10px;
+    top: 42.5rem;
+    left: 69.7rem;
+    cursor: pointer;
+
+}
+
+#form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+}
+
+/* Style form elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.para {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    text-align: center;
+    border-radius: 50%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+    .map {
+
+        height: 90vh;
+        width: 95vw;
+        gap: 1rem;
+        overflow: hidden;
+    }
+
+    .bgimg-container {
+        height: 87vh;
+        width: 90vw;
+        overflow: auto;
+    }
+
+    .bgimg {
+        transform-origin: 0 0;
+        transition: transform 0.3s ease;
+    }
+
+}
